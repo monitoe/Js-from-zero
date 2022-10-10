@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input id='first-name' value='Dmitry' class='first-name-input' />
+<input id='second-name' value='Ostrovskiy' class='second-name-input'/>
+<input id='last-name' value='Ilich' class='last-name-input'/>
+<select>
+    <option id="first-city">Moscow</option>
+    <option id='second-city' value="minsk" selected>Minsk</option>
+    <option id='last-city'value="Kiev">Kiev</option>
+</select>
+
+<textarea id="hobby">Watch films, yoga, coding, reading books</textarea>
+<div id="avatar-wrapper">
+    <img id="avatarId" src="https://yt3.ggpht.com/ytc/AMLnZu8hNmbzgxGy37u9IEKzo4QQN3ieq4YNbP3uyPp4xA=s48-c-k-c0x00ffffff-no-rj" alt="ava" />
+</div> 
+
+<script>
+	let firstNameEl = document.getElementById('first-name');
+	console.log(firstNameEl.className);
+
+    let secondNameEl = document.getElementById('second-name');
+    console.log(secondNameEl.value);
+
+    let lastNameEl = document.getElementById('last-name');
+    console.log(lastNameEl.value);
+
+    let firstCityEl = document.getElementById('first-city');
+    console.log(firstCityEl.innerHTML);
+
+    let secondCityEl = document.getElementById('second-city');
+    console.log(secondCityEl.innerHTML);
+
+    let hobbyEl = document.getElementById('hobby');
+    console.log(hobbyEl.innerHTML);
+    
+    let avatarWrapperEl = document.getElementById('avatar-wrapper');
+    
+    avatarWrapperEl.innerHTML = "<ul id='list'><li>1</li></ul>";
+
+    let avatarEl = document.getElementById('avatarId');
+    avatarEl.src = "https://yt3.ggpht.com/zBM58SO1QquGSVA1FpEulGYOgutW…wA2kmhvdnowi4jbXF51X_Hw=s68-c-k-c0x00ffffff-no-rj";
+    avatarEl.alt ="i am avatar"; 
+
+    let listId='list';
+    let numberList = document.getElementById('list');
+    window.alert(numberList.innerHTML);
+    
+
+    
+
+    firstNameEl.value = 'Andrey';
+    firstNameEl.value = 'Victor';
+    ///lastNameEl.setAttribute('value','kamasutra');
+    lastNameEl.className ='error-input last-name-input ';
+
+    
+</script>
+<style>
+    .second-name-input{
+        border:green 5px solid;
+    }
+    .error-input{
+        border:red 5px solid;
+    }
+</style>
+</body>
+</html>
